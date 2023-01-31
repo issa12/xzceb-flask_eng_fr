@@ -1,15 +1,15 @@
 import unittest
-import translator
+from machinetranslation import translator
 
 class TestTranslator(unittest.TestCase): 
     def test_fr2en(self):
         print("test_fr2en")
-        self.assertEqual(translator.frenchToEnglish("Bonjour"), "Hello")
-        self.assertNotEqual(translator.frenchToEnglish("bonjour"), "test")
+        self.assertEqual(translator.french_to_english("Bonjour"), "Hello")
+        self.assertNotEqual(translator.french_to_english("bonjour"), "test")
 
     def test_en2fr(self):
         print("test_en2fr")
-        self.assertEqual(translator.englishToFrench("Hello"), "Bonjour")
-        self.assertNotEqual(translator.englishToFrench("bonjour"), "end")
+        self.assertEqual(translator.english_to_french("Hello"), "Bonjour")
+        self.assertNotEqual(translator.english_to_french("bonjour"), "end")
 
 unittest.main()
